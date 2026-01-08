@@ -1,0 +1,13 @@
+{
+  "name": "chippy-ao-plugins",
+  "owner": {
+    "name": "chippy-ao"
+  },
+  "plugins": [
+    {
+      "name": "plan-with-questions",
+      "source": "./plan-with-questions",
+      "description": "質問で要件を深掘りしてからプランニングするコマンドを提供"
+    }
+  ]
+}

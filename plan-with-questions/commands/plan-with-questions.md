@@ -78,11 +78,32 @@ AskUserQuestionで「この整理内容で認識は合っていますか？」�
 
 ### 4. 出力形式選択フェーズ
 
-合意が取れたら、AskUserQuestionで出力形式を選択してもらう：
+合意が取れたら、AskUserQuestionで出力形式を選択してもらう。
 
-**選択肢**：
-1. **tmp/{plan_name}.md として出力** - マークダウンファイルとして保存
-2. **Claude Code の Plan モードで対応** - Task ツールで Plan エージェントを呼び出す
+**必ず以下の形式でAskUserQuestionを呼び出すこと**：
+```json
+{
+  "questions": [{
+    "question": "プランの出力形式を選んでください。",
+    "header": "出力形式",
+    "options": [
+      {
+        "label": "ファイル出力",
+        "description": "tmp/{plan_name}.md にマークダウンファイルとして保存"
+      },
+      {
+        "label": "Plan モードで実行",
+        "description": "Claude Code の Plan エージェントを呼び出して実装計画を立てる"
+      },
+      {
+        "label": "チャットで説明",
+        "description": "このままチャットでプランを説明する（ファイル出力なし）"
+      }
+    ],
+    "multiSelect": false
+  }]
+}
+```
 
 plan_name は整理した内容から適切な名前を自動生成する（例: `login-feature-plan`, `api-refactor-plan`）
 
@@ -90,15 +111,20 @@ plan_name は整理した内容から適切な名前を自動生成する（例:
 
 選択された形式に応じてプランを作成する：
 
-**tmp/{plan_name}.md として出力する場合**：
+**ファイル出力の場合**：
 - Writeツールで `tmp/{plan_name}.md` にプランを出力
 - プランの内容を簡潔に説明
 - AskUserQuestionで最終承認を求める
 
-**Claude Code の Plan モードで対応する場合**：
+**Plan モードで実行の場合**：
 - Taskツールで Plan エージェント（subagent_type: "Plan"）を呼び出す
 - 整理した要件をプロンプトとして渡す
 - Plan エージェントの結果を確認し、必要に応じて調整
+
+**チャットで説明の場合**：
+- 整理した要件をもとに、実装プランをチャット上で詳細に説明
+- ステップごとの作業内容、注意点、依存関係などを記載
+- ファイル出力は行わない
 
 ### 6. 完了
 
