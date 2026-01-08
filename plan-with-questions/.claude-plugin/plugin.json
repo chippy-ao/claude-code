@@ -1,0 +1,10 @@
+{
+  "name": "plan-with-questions",
+  "version": "1.0.0",
+  "description": "質問で要件を深掘りしてからプランニングするコマンドを提供するプラグイン",
+  "author": {
+    "name": "chippy-ao"
+  },
+  "license": "MIT",
+  "keywords": ["planning", "questions", "requirements", "qdd"]
+}
