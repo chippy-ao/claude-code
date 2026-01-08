@@ -1,5 +1,5 @@
 {
-  "name": "plan-with-questions",
+  "name": "plan",
   "version": "1.0.0",
   "description": "質問で要件を深掘りしてからプランニングするコマンドを提供するプラグイン",
   "author": {

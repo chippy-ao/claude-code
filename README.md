@@ -13,7 +13,7 @@ Claude Code 用のプラグイン集
 ### 2. プラグインをインストール
 
 ```bash
-/plugin install plan-with-questions@chippy-ao-plugins
+/plugin install plan@chippy-ao-plugins
 ```
 
 ### 3. 確認
@@ -28,21 +28,21 @@ Claude Code 用のプラグイン集
 
 | プラグイン | 説明 |
 |------------|------|
-| [plan-with-questions](./plan-with-questions/) | 質問で要件を深掘りしてからプランニングする |
+| [plan](./plan/) | 質問で要件を深掘りしてからプランニングする |
 
 ## 使い方
 
-### plan-with-questions
+### plan:digging
 
 ```bash
 # 相談内容を引数で指定
-/plan-with-questions ログイン機能を追加したい
+/plan:digging ログイン機能を追加したい
 
 # 引数なしで対話的に開始
-/plan-with-questions
+/plan:digging
 ```
 
-詳細は [plan-with-questions/README.md](./plan-with-questions/README.md) を参照。
+詳細は [plan/README.md](./plan/README.md) を参照。
 
 ## ライセンス
 

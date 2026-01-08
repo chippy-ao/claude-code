@@ -5,8 +5,8 @@
   },
   "plugins": [
     {
-      "name": "plan-with-questions",
-      "source": "./plan-with-questions",
+      "name": "plan",
+      "source": "./plan",
       "description": "質問で要件を深掘りしてからプランニングするコマンドを提供"
     }
   ]
