@@ -1,7 +1,7 @@
 {
   "name": "plan",
-  "version": "1.0.0",
-  "description": "質問で要件を深掘りしてからプランニングするコマンドを提供するプラグイン",
+  "version": "1.1.0",
+  "description": "質問で要件を深掘りしてからプランニングするスキルと、未完了計画のリマインダー hook を提供するプラグイン",
   "author": {
     "name": "chippy-ao"
   },
