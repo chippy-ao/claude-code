@@ -43,9 +43,10 @@ created: [ISO 8601 形式の日時]
 - `in_progress`: 実装中
 - `completed`: 完了
 
-## 関連 Hook
+## 関連コンポーネント
 
-`plan-reminder` hook がセッション開始時に未完了の計画を通知する。
+- **SessionStart hook**: セッション開始時に未完了の計画を通知
+- **/plan:check コマンド**: 計画ファイルの status 更新・削除
 
 ## 設計思想
 

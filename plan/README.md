@@ -12,18 +12,20 @@
 plan/
 ├── .claude-plugin/
 │   └── plugin.json
+├── commands/
+│   └── check.md          # 計画管理コマンド
 ├── skills/
-│   └── digging/
+│   └── dig/
 │       ├── SKILL.md      # スキル本体
 │       └── README.md     # 詳細説明
 └── hooks/
-    ├── plan-reminder.md      # 未完了計画のリマインダー
-    └── plan-status-update.md # 計画参照時の進捗更新
+    ├── hooks.json        # hook 定義
+    └── check-plans.sh    # 未完了計画の通知
 ```
 
 ## 機能
 
-### digging スキル
+### dig スキル
 
 要件を深掘りして計画を立案するスキル。
 
@@ -39,38 +41,24 @@ plan/
 - 「計画を作って」
 - 「深掘りして」
 
-### plan-reminder hook
+### /plan:check コマンド
 
-セッション開始時に未完了の計画をリマインドする。
+計画ファイルを管理するコマンド。
+
+**機能**:
+- `~/.claude/plans/` と `./.claude/plans/` の計画ファイルを一覧表示
+- 複数選択で一括操作 or 個別操作
+- status の更新（pending / in_progress / completed）
+- 計画ファイルの削除
+
+### SessionStart hook
+
+セッション開始時に未完了の計画を通知する。
 
 **機能**:
 - `./.claude/plans/*.md` と `~/.claude/plans/*.md` をチェック
 - `status: completed` 以外の計画を通知
-- 1週間以上前の古い計画は削除するか確認
-
-### plan-status-update hook
-
-計画ファイルを参照した時に進捗を更新する。
-
-**トリガー**: `.claude/plans/*.md` を Read した時
-
-**機能**:
-
-| status | 動作 |
-|--------|------|
-| `pending` | 作業開始するか確認 → `in_progress` に更新 |
-| `in_progress` | 進捗記録 or 完了を選択 → ✅ マーク付与 or `completed` に更新 |
-| `completed` | 削除するか確認 |
-
-**進捗マークの例**:
-```markdown
-## 実装手順
-
-1. ✅ データベース設計
-2. ✅ API エンドポイント作成
-3. フロントエンド実装  ← 次はここ
-4. テスト
-```
+- `/plan:check` コマンドへの誘導
 
 ## 計画ファイル
 
@@ -107,17 +95,20 @@ completed_at: 2025-01-09T18:00:00+09:00 # completed 時に追加
 ## 使い方
 
 ```bash
-# 相談内容を引数で指定
+# 計画を立てる（相談内容を引数で指定）
 /plan:dig ログイン機能を追加したい
 
-# 引数なしで実行（対話的に相談内容を聞く）
+# 計画を立てる（対話的に相談内容を聞く）
 /plan:dig
+
+# 計画を管理する（status 更新、削除）
+/plan:check
 ```
 
 ## 実行フロー
 
 ```
-/plan:digging
+/plan:dig
     ↓
 1. 初期化：CLAUDE.md / rules を読み込み
     ↓
