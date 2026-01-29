@@ -8,6 +8,11 @@
       "name": "plan",
       "source": "./plan",
       "description": "質問で要件を深掘りしてからプランニングするスキルと、未完了計画のリマインダー hook を提供"
+    },
+    {
+      "name": "multi-agent-yakuza",
+      "source": "./multi-agent-yakuza",
+      "description": "Yakuza組織風の階層的マルチエージェントシステム。親父（ユーザー）の命令を若頭が受け取り、若頭補佐がタスク分解、若衆が並列実行。"
     }
   ]
 }
