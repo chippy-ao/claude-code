@@ -1,0 +1,21 @@
+{
+  "name": "multi-agent-yakuza",
+  "version": "1.0.0",
+  "description": "Yakuza組織風の階層的マルチエージェントシステム。親父（ユーザー）の命令を若頭が受け取り、若頭補佐がタスク分解、若衆が並列実行。",
+  "author": {
+    "name": "chippy-ao"
+  },
+  "license": "MIT",
+  "keywords": [
+    "multi-agent",
+    "yakuza",
+    "parallel",
+    "task-management",
+    "hierarchical",
+    "delegation",
+    "workflow",
+    "orchestration",
+    "organization",
+    "automation"
+  ]
+}
