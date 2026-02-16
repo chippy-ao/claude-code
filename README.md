@@ -18,6 +18,9 @@ Claude Code 用のプラグイン集
 
 # multi-agent-yakuzaプラグイン
 /plugin install multi-agent-yakuza@chippy-ao-plugins
+
+# law-studyプラグイン
+/plugin install law-study@chippy-ao-plugins
 ```
 
 ### 3. 確認
@@ -34,6 +37,7 @@ Claude Code 用のプラグイン集
 |------------|------|
 | [plan](./plan/) | 質問で要件を深掘りしてからプランニングするスキルと hook を提供 |
 | [multi-agent-yakuza](./multi-agent-yakuza/) | Yakuza組織風の階層的マルチエージェントシステム。親父の命令を頭が受け取り、補佐がタスク分解、若いのと叔父貴が並列実行 |
+| [law-study](./law-study/) | e-Gov法令APIを活用した法令勉強支援。キーワード検索・要約・質問応答 |
 
 ## 使い方
 
@@ -79,6 +83,25 @@ Yakuza組織風のマルチエージェントシステム。
 - 呼称ルール（親父、頭、兄貴、叔父貴、若いの）
 
 詳細は [multi-agent-yakuza/README.md](./multi-agent-yakuza/README.md) を参照。
+
+### law-study
+
+e-Gov法令APIを使った法令勉強支援。
+
+```bash
+# キーワードを指定して検索
+/law 民法
+
+# 引数なしで対話的に開始
+/law
+```
+
+**フロー**:
+1. キーワードを入力して法令を検索
+2. 一覧から学習したい法令を選択
+3. 法令の要約や質問応答で学習
+
+詳細は [law-study/README.md](./law-study/README.md) を参照。
 
 ## ライセンス
 
