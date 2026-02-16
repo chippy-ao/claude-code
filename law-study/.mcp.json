@@ -1,0 +1,6 @@
+{
+  "law-api": {
+    "command": "bunx",
+    "args": ["github:chippy-ao/laws-api-mcp"]
+  }
+}
