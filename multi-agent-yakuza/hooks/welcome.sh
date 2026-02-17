@@ -1,6 +1,0 @@
-#!/bin/bash
-cat <<'EOF'
-{
-  "systemMessage": "親父、困ったことがあれば何なりと。\n\n💡 使い方:\n- タスクを依頼: 「〜を実装して」「〜を修正して」など\n- 進捗確認: `/multi-agent-yakuza:status`"
-}
-EOF
