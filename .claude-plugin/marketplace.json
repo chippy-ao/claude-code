@@ -8,6 +8,11 @@
       "name": "law-study",
       "source": "./law-study",
       "description": "e-Gov法令APIを活用した法令勉強支援プラグイン。キーワード検索で法令を探し、AIによる要約・質問応答で学習を支援。"
+    },
+    {
+      "name": "redmine",
+      "source": "./redmine",
+      "description": "redmine-cli を活用したチケット検索・閲覧・分析支援プラグイン。プロファイル管理で複数の Redmine サーバーを横断操作。"
     }
   ]
 }
