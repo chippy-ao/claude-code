@@ -3,3 +3,7 @@
 
 # brain storming
 docs/plans/*
+
+specs/
+.specify/
+.claude/skills/speckit*/
