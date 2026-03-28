@@ -1,5 +1,4 @@
 ---
-name: create
 description: Redmineチケット作成支援スキル。redmine-cli を使ってチケットを対話的に作成する。「redmine:create」「チケットを作って」「チケット起票」「新規チケット」で起動。
 ---
 

@@ -1,6 +1,6 @@
 {
   "name": "law-study",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "e-Gov法令APIを活用した法令勉強支援プラグイン。キーワード検索で法令を探し、AIによる要約・質問応答で学習を支援。",
   "author": {
     "name": "chippy-ao"
