@@ -33,7 +33,7 @@ Claude Code 用のプラグイン集
 | プラグイン | 説明 |
 |------------|------|
 | [law-study](./law-study/) | e-Gov法令APIを活用した法令勉強支援。キーワード検索・要約・質問応答 |
-| [redmine](./redmine/) | redmine-cli を活用したチケット検索・閲覧・分析支援。複数サーバー横断操作対応 |
+| [redmine](./redmine/) | redmine-cli を活用したチケット検索・閲覧・分析・作成・関連付け支援。複数サーバー横断操作対応 |
 
 ## 使い方
 
@@ -58,7 +58,7 @@ e-Gov法令APIを使った法令勉強支援。
 
 ### redmine
 
-redmine-cli を使ったチケット検索・閲覧・分析支援。
+redmine-cli を使ったチケット検索・閲覧・分析・作成・関連付け支援。
 
 ```text
 # プロファイル設定
@@ -66,6 +66,12 @@ redmine:config
 
 # キーワードを指定して検索
 redmine:search ログイン機能のバグ
+
+# チケット作成
+redmine:create
+
+# チケット関連付け
+redmine:relation
 
 # プロジェクト状況分析
 redmine:analyze
@@ -75,6 +81,8 @@ redmine:analyze
 - プロファイル管理（複数 Redmine サーバーの接続設定）
 - チケット検索（キーワード、プロジェクト、ステータス、担当者等）
 - チケット詳細・コメント履歴の表示
+- チケット作成（対話的にプロジェクト選択・名称→ID解決）
+- チケット関連付け（6種のリレーションタイプ対応）
 - チケット分析（ステータス別集計、担当者負荷、期限切れ警告）
 
 **前提条件**: [redmine-cli](https://github.com/chippy-ao/redmine-cli) のインストールが必要。
