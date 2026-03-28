@@ -1,5 +1,4 @@
 ---
-name: relation
 description: Redmineチケット関連付けスキル。redmine-cli を使ってチケット間のリレーションを作成・削除する。「redmine:relation」「チケットを関連付けて」「リレーション追加」「紐付け」で起動。
 ---
 

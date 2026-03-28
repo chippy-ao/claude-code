@@ -1,5 +1,4 @@
 ---
-name: search
 description: Redmineチケット検索・閲覧支援スキル。redmine-cli を使ってチケットを検索・閲覧し、プロジェクト状況の把握を支援する。「redmine:search」「チケットを探して」「Redmineの課題を確認」「Redmineのチケット」で起動。
 ---
 

@@ -1,5 +1,4 @@
 ---
-name: config
 description: Redmine CLI のプロファイル管理スキル。接続先の追加・一覧・デフォルト設定・削除を対話的に行う。「redmine:config」「Redmineの接続設定」「プロファイル追加」「Redmine設定」で起動。
 ---
 
