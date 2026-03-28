@@ -1,7 +1,7 @@
 {
   "name": "redmine",
-  "version": "2.0.0",
-  "description": "redmine-cli を活用したチケット検索・閲覧・分析支援プラグイン。プロファイル管理で複数の Redmine サーバーを横断操作。",
+  "version": "2.1.0",
+  "description": "redmine-cli を活用したチケット検索・閲覧・分析・作成・関連付け支援プラグイン。プロファイル管理で複数の Redmine サーバーを横断操作。",
   "author": {
     "name": "chippy-ao"
   },
