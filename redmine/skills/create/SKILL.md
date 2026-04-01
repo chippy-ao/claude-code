@@ -35,7 +35,7 @@ redmine-cli を使って、チケットの作成を対話的に支援する。
 1. `which redmine-cli` で CLI がインストールされているか確認する
 2. **未インストールの場合**、以下を案内して終了する:
    - macOS: `brew install chippy-ao/tap/redmine-cli`
-   - Windows: GitHub Releases (https://github.com/chippy-ao/redmine-cli/releases) から ZIP をダウンロードし、展開して `redmine-cli.exe` を取得。PATH に追加すると便利
+   - Windows: [README の Windows セクション](../../README.md) を参照（ZIP 展開 → PATH 設定 → ターミナル再起動）
    - その他: `go install github.com/chippy-ao/redmine-cli@latest`
 
 ### 0. プロファイル選択
