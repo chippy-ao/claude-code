@@ -20,18 +20,22 @@ brew install chippy-ao/tap/redmine-cli
 **Windows:**
 
 1. [GitHub Releases](https://github.com/chippy-ao/redmine-cli/releases) から ZIP をダウンロード
-2. ZIP を展開し、`redmine-cli.exe` を取得
-3. コマンドプロンプトか PowerShell で `redmine-cli.exe` があるフォルダから実行:
+2. ZIP を展開し、`redmine-cli.exe` を任意のフォルダに配置（例: `C:\tools\redmine-cli\`）
+3. PATH を設定して、どこからでも `redmine-cli` コマンドを実行できるようにする:
+   - `Win + R` →「`sysdm.cpl`」を実行 →「詳細設定」タブ →「環境変数」
+   - ユーザー環境変数の `Path` を選んで「編集」→「新規」
+   - `redmine-cli.exe` を配置したフォルダのパスを追加（例: `C:\tools\redmine-cli`）
+   - 「OK」で閉じる
+4. **ターミナルを再起動**して PATH を反映:
+   - コマンドプロンプトや PowerShell を**一度閉じて開き直す**
+   - Claude Code を使っている場合は、**Claude Code を起動しているターミナルも再起動**が必要（Claude Code はターミナルの環境変数を継承するため）
+5. 動作確認:
 
 ```powershell
-.\redmine-cli.exe config add work --url https://redmine.example.com --api-key YOUR_API_KEY
-.\redmine-cli.exe search --keyword "バグ" --status open
+redmine-cli --version
 ```
 
-4. （任意）PATH を通すとどこからでも実行可能:
-   - Win + X →「システム」→「システムの詳細設定」→「環境変数」
-   - `Path` を選んで「編集」→「新規」で `redmine-cli.exe` があるフォルダのパスを追加
-   - コマンドプロンプトを再起動
+バージョンが表示されれば OK。Claude Code 上でも同様に認識される。
 
 **go install:**
 
