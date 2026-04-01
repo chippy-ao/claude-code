@@ -113,6 +113,20 @@ redmine:update チケット#456にコメントを追加
 redmine:update チケット#789を削除
 ```
 
+### チケット一括作成
+
+```text
+redmine:batch-create
+```
+
+または具体的に:
+
+```text
+redmine:batch-create tickets.yml からチケットを一括作成して
+```
+
+フリーフォーマット（txt/md/yaml等）のファイルからチケット情報を読み取り、一括作成する。親子チケットの階層構造にも対応。
+
 ### プロジェクト状況分析
 
 ```text
@@ -135,6 +149,7 @@ redmine:config
 | `redmine:relation` | チケット間のリレーション追加・削除（6種の関連タイプ対応） |
 | `redmine:update` | チケットの更新・削除・コメント記入（名称→ID解決・確認フロー付き） |
 | `redmine:analyze` | ステータス別集計、担当者負荷、期限切れ警告、優先度分布 |
+| `redmine:batch-create` | ファイルからチケット情報を読み込み一括作成（フリーフォーマット対応・親子階層対応） |
 
 ## 複数の Redmine サーバーを使う
 
